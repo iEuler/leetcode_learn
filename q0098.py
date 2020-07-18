@@ -1,3 +1,17 @@
+"""
+98. Validate Binary Search Tree
+
+https://leetcode.com/problems/validate-binary-search-tree/
+
+Given a binary tree, determine if it is a valid binary search tree (BST).
+
+Assume a BST is defined as follows:
+
+The left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+"""
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -23,8 +37,9 @@ class Solution:
 
         return inRange(root, -1 * float('inf'), float('inf'))
 
+
 class Solution2:
-    def isValidBST(self,ary):
+    def isValidBST(self, ary):
         """
         :type ary: array like a = [5, 1, 4, None, None, 3, 6]
         :rtype: bool
@@ -51,5 +66,6 @@ class Solution2:
 
 a = [5, 1, 4, None, None, 3, 6]
 # a = [2,1,3]
+a = [15, 10, 16, 5, 20, None, None]
 print(Solution2().isValidBST(a))
 
