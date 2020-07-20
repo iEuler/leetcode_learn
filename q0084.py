@@ -31,8 +31,6 @@ class Solution():
                     max_area = max(max_area, (i - last) * e_last)
             monoq.append([last, e])
 
-        # max_area = max(max_area, max([(len(heights)-x[0])*x[1] for x in monoq]))
-
         return max_area
 
 
