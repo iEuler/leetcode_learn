@@ -25,7 +25,7 @@ Do not use the eval built-in library function.
 
 class Solution:
     def calculate(self, s: str) -> int:
-        lst = []
+        ans = 0
         ops = [1]
         s += ' '
         y = ''
@@ -36,7 +36,7 @@ class Solution:
             else:
                 if y:
                     num = cur_op*int(y)
-                    lst.append(num)
+                    ans += num
                     y = ''
 
                 if x in '+-':
@@ -48,7 +48,7 @@ class Solution:
                     ops.pop()
                     cur_op = ops[-1]
 
-        return sum(lst)
+        return ans
 
 
 s = " 2-1 + 2 "
