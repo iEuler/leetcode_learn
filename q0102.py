@@ -21,6 +21,7 @@ return its level order traversal as:
 
 from typing import List
 # Definition for a binary tree node.
+from queue import Queue
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
